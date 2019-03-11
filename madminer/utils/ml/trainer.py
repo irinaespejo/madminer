@@ -49,7 +49,7 @@ class Trainer(object):
         validation_split=0.25,
         early_stopping=True,
         early_stopping_patience=None,
-        clip_gradient=100.0,
+        clip_gradient=10.0,
         verbose="some",
     ):
         logger.debug("Initialising training data")
