@@ -334,9 +334,9 @@ class Trainer(object):
             logging_fn(val_report)
 
     def wrap_up_early_stopping(self, best_model, currrent_loss, best_loss, best_epoch):
-        if currrent_loss is None or best_loss is None:
-            logger.warning("Loss is None, cannot wrap up early stopping")
-        elif best_loss < currrent_loss:
+        if best_loss is None or not np.isfinite(best_loss):
+            logger.warning("Best loss is None or NaN, cannot wrap up early stopping")
+        elif currrent_loss is None or not np.isfinite(currrent_loss) or best_loss < currrent_loss:
             logger.info(
                 "Early stopping after epoch %s, with loss %8.5f compared to final loss %8.5f",
                 best_epoch + 1,
