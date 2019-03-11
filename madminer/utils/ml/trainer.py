@@ -303,6 +303,9 @@ class Trainer(object):
         if early_stopping_patience is not None and i_epoch - best_epoch > early_stopping_patience >= 0:
             raise EarlyStoppingException
 
+        if not np.isfinite(loss):
+            raise EarlyStoppingException
+
         return best_loss, best_model, best_epoch
 
     @staticmethod
