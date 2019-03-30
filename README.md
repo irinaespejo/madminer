@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/irinaespejo/madminer/master?filepath=https%3A%2F%2Fgithub.com%2Firinaespejo%2Fmadminer%2Fblob%2Fmaster%2Fexamples%2Ftutorial_delphes%2F1_from_cards_to_likelihood_ratio.ipynb)
+
 # MadMiner
 
 **Johann Brehmer, Felix Kling, Irina Espejo, and Kyle Cranmer**
